@@ -25,7 +25,7 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         ".eslintrc.cjs",
-        "next.config.cjs",
+        "next.config.mjs",
         "postcss.config.cjs"
     ],
     "exclude": ["node_modules"]
