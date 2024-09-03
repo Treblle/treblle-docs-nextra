@@ -19,7 +19,8 @@
         "format:fix": "prettier . --write",
         "lint": "next lint",
         "prepare": "husky && panda codegen",
-        "start": "next start"
+        "start": "next start",
+        "typecheck": "tsc --noEmit"
     },
     "dependencies": {
         "next": "14.2.7",
