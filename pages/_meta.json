@@ -1,7 +1,17 @@
 {
-    "index": "Introduction",
+    "index": {
+        "title": "Treblle - Documentation",
+        "display": "hidden",
+        "theme": {
+            "breadcrumb": false,
+            "footer": false,
+            "sidebar": false,
+            "toc": false,
+            "pagination": false
+        }
+    },
     "another": "Another Page",
-    "advanced": "Advanced (A Folder)",
+    "advanced": "Advsanced (A Folder)",
     "about": {
         "title": "About",
         "type": "page"
