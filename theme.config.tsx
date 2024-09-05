@@ -12,6 +12,9 @@ const config: DocsThemeConfig = {
     footer: {
         text: "Treblle",
     },
+    nextThemes: {
+        defaultTheme: "system",
+    },
 };
 
 export default config;

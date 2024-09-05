@@ -1,5 +1,6 @@
 import "../styles/panda.css";
 
+import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
 
 import { css, cx } from "~styled-system/css";
@@ -21,7 +22,11 @@ export default function RootLayout(properties: RootLayoutProperties) {
             <head>
                 <title>Treblle Documentation</title>
             </head>
-            <body>{children}</body>
+            <body>
+                <ThemeProvider attribute="class" enableSystem>
+                    {children}
+                </ThemeProvider>
+            </body>
         </html>
     );
 }
