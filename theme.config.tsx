@@ -1,7 +1,7 @@
-import { DocsThemeConfig } from "nextra-theme-docs";
+import type { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-    logo: <span>My Project</span>,
+    logo: <span>Treblle</span>,
     project: {
         link: "https://github.com/shuding/nextra-docs-template",
     },
@@ -10,7 +10,7 @@ const config: DocsThemeConfig = {
     },
     docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
     footer: {
-        text: "Nextra Docs Template",
+        text: "Treblle",
     },
 };
 
