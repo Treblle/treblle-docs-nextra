@@ -14,6 +14,7 @@ export const buttonRecipe = defineRecipe({
         paddingX: "7",
         paddingY: "2.5",
         height: "11",
+        width: "fit-content",
     },
     defaultVariants: {
         variant: "solid",

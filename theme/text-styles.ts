@@ -3,8 +3,9 @@ import { defineTextStyles } from "@pandacss/dev";
 export const textStyles = defineTextStyles({
     h1: {
         value: {
-            fontSize: "2.875rem",
+            fontSize: { base: "2.125rem", lg: "2.875rem" },
             fontFamily: "poppins",
+            fontWeight: "bold",
         },
     },
     h2: {
