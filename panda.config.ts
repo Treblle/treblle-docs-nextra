@@ -1,5 +1,10 @@
 import { defineConfig } from "@pandacss/dev";
 
+import { recipes } from "./theme/recipes";
+import { semanticTokens } from "./theme/semantic-tokens";
+import { textStyles } from "./theme/text-styles";
+import { tokens } from "./theme/tokens";
+
 export default defineConfig({
     // Whether to use css reset
     preflight: true,
@@ -13,23 +18,10 @@ export default defineConfig({
     // Useful for theme customization
     theme: {
         extend: {
-            tokens: {
-                colors: {
-                    "electric-400": { value: "#1E42A2" },
-                    "electric-300": { value: "#0058ff" },
-                    "electric-200": { value: "#5192ff" },
-                    midnight: { value: "#01041a" },
-                    metal: { value: "#6c7285" },
-                    "deep-metal": { value: "#353544" },
-                    cloud: { value: "#9ea2bd" },
-                    fog: { value: "#f6f7fa" },
-                    space: { value: "#11152f" },
-                },
-                fonts: {
-                    poppins: { value: "var(--font-poppins), sans-serif" },
-                    inter: { value: "var(--font-inter), sans-serif" },
-                },
-            },
+            semanticTokens,
+            tokens,
+            textStyles,
+            recipes,
         },
     },
 
@@ -37,6 +29,5 @@ export default defineConfig({
     outdir: "styled-system",
 
     jsxFramework: "react",
-
-    jsxStyleProps: "minimal",
+    jsxStyleProps: "all",
 });
