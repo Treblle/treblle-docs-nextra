@@ -11,8 +11,8 @@ export const semanticTokens = defineSemanticTokens({
             },
             muted: {
                 value: {
-                    base: "{colors.deep-metal}",
-                    _dark: "{colors.metal}",
+                    base: "{colors.cloud}",
+                    _dark: "{colors.deep-metal}",
                 },
             },
             dark: {
@@ -25,12 +25,12 @@ export const semanticTokens = defineSemanticTokens({
                 value: { base: "{colors.white}", _dark: "{colors.black}" },
             },
             emphasized: {
-                value: { base: "{colors.white}", _dark: "{colors.electric.300}" },
+                value: { base: "{colors.cloud}", _dark: "{colors.fog}" },
             },
             "emphasized.hover": {
                 value: {
                     base: "{colors.gray.200}",
-                    _dark: "{colors.gray.400}",
+                    _dark: "{colors.space}",
                 },
             },
         },
@@ -43,9 +43,12 @@ export const semanticTokens = defineSemanticTokens({
             },
             muted: {
                 value: {
-                    base: "{colors.deep-metal}",
-                    _dark: "{colors.metal}",
+                    base: "{colors.regent}",
+                    _dark: "{colors.haze}",
                 },
+            },
+            inverted: {
+                value: { base: "{colors.white}", _dark: "{colors.midnight}" },
             },
         },
     },

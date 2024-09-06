@@ -1,13 +1,15 @@
 import "../styles/panda.css";
+import "../styles/global.css";
 
-import type { ReactNode } from "react";
+import { ThemeProvider } from "next-themes";
+import React from "react";
 
 import { css, cx } from "~styled-system/css";
 
 import { fontClassName } from "../styles/fonts";
 
 interface RootLayoutProperties {
-    children: ReactNode;
+    children: React.ReactNode;
 }
 
 export default function RootLayout(properties: RootLayoutProperties) {
@@ -21,7 +23,11 @@ export default function RootLayout(properties: RootLayoutProperties) {
             <head>
                 <title>Treblle Documentation</title>
             </head>
-            <body>{children}</body>
+            <body>
+                <ThemeProvider attribute="class" enableSystem>
+                    {children}
+                </ThemeProvider>
+            </body>
         </html>
     );
 }

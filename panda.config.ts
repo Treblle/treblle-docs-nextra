@@ -29,5 +29,5 @@ export default defineConfig({
     outdir: "styled-system",
 
     jsxFramework: "react",
-    jsxStyleProps: "all",
+    jsxStyleProps: "minimal",
 });
