@@ -66,7 +66,7 @@ export default function Page() {
             </Stack>
             <Box className={mainBgGradient}>
                 <Link href="/changelog" className={changelogButton}>
-                    Treblle Changelog
+                    Changelog
                     <Icon
                         icon="ChevronRight"
                         width="10px"
