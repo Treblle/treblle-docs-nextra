@@ -47,6 +47,9 @@ export const semanticTokens = defineSemanticTokens({
                     _dark: "{colors.haze}",
                 },
             },
+            inverted: {
+                value: { base: "{colors.white}", _dark: "{colors.midnight}" },
+            },
         },
     },
 });

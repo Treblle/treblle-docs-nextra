@@ -65,6 +65,15 @@ export default function Page() {
                 </Stack>
             </Stack>
             <Box className={mainBgGradient}>
+                <Link href="/changelog" className={changelogButton}>
+                    Treblle Changelog
+                    <Icon
+                        icon="ChevronRight"
+                        width="10px"
+                        height="10px"
+                        className={css({ marginLeft: "2" })}
+                    />
+                </Link>
                 <styled.h1 css={{ textStyle: "h1", zIndex: "10" }}>Treblle Documentation</styled.h1>
                 <styled.p
                     css={{
@@ -95,10 +104,10 @@ export default function Page() {
                     }}
                 >
                     <Button asChild>
-                        <Link href={"/advanced"}>Get Started</Link>
+                        <Link href={"/introduction"}>Get Started</Link>
                     </Button>
                     <Button variant="outline" asChild>
-                        <Link href={"/advanced"}>
+                        <Link href="https://github.com/Treblle/treblle-docs-nextra" target="_blank">
                             <Icon
                                 icon="Github"
                                 width="20px"
@@ -144,5 +153,22 @@ const heroImage = css({
     objectFit: "contain",
     lg: {
         display: "block",
+    },
+});
+
+const changelogButton = css({
+    backgroundColor: "#dfe3ef",
+    color: "text.inverted",
+    fontSize: "sm",
+    fontWeight: "semibold",
+    display: "flex",
+    alignItems: "center",
+    paddingY: "2",
+    paddingX: "4",
+    borderRadius: "22px",
+    zIndex: "10",
+    width: "fit-content",
+    _hover: {
+        backgroundColor: "cloud",
     },
 });

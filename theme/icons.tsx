@@ -99,6 +99,28 @@ function Discord(properties: ComponentPropsWithoutRef<"svg">) {
     );
 }
 
+function ChevronRight(properties: ComponentPropsWithoutRef<"svg">) {
+    return (
+        <svg
+            width="11"
+            height="10"
+            viewBox="0 0 11 10"
+            xmlns="http://www.w3.org/2000/svg"
+            {...properties}
+        >
+            <path
+                d="M3.304 8.891 7.196 5 3.304 1.109"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                fill="none"
+                fillRule="evenodd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    );
+}
+
 const icons = {
     Close,
     LogoPositive,
@@ -106,6 +128,7 @@ const icons = {
     Sun,
     Github,
     Discord,
+    ChevronRight,
 };
 
 export type IconType = keyof typeof icons;
