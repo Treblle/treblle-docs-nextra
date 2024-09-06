@@ -2,14 +2,14 @@ import "../styles/panda.css";
 import "../styles/global.css";
 
 import { ThemeProvider } from "next-themes";
-import type { ReactNode } from "react";
+import React from "react";
 
 import { css, cx } from "~styled-system/css";
 
 import { fontClassName } from "../styles/fonts";
 
 interface RootLayoutProperties {
-    children: ReactNode;
+    children: React.ReactNode;
 }
 
 export default function RootLayout(properties: RootLayoutProperties) {
