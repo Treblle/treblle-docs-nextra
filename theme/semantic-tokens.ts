@@ -11,7 +11,7 @@ export const semanticTokens = defineSemanticTokens({
             },
             muted: {
                 value: {
-                    base: "{colors.fog}",
+                    base: "{colors.cloud}",
                     _dark: "{colors.deep-metal}",
                 },
             },
@@ -25,7 +25,7 @@ export const semanticTokens = defineSemanticTokens({
                 value: { base: "{colors.white}", _dark: "{colors.black}" },
             },
             emphasized: {
-                value: { base: "{colors.white}", _dark: "{colors.electric.300}" },
+                value: { base: "{colors.cloud}", _dark: "{colors.fog}" },
             },
             "emphasized.hover": {
                 value: {

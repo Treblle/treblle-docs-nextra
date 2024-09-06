@@ -42,7 +42,7 @@ export default function Page() {
                         css={{
                             width: "1px",
                             height: "28px",
-                            bgColor: "deep-metal",
+                            bgColor: "bg.muted",
                             marginRight: "2",
                         }}
                     />
@@ -52,6 +52,7 @@ export default function Page() {
                             flexDirection: "row",
                             alignItems: "center",
                             gap: "4",
+                            color: "bg.emphasized",
                         }}
                     >
                         <Link href="https://github.com/Treblle/treblle-docs-nextra" target="_blank">
@@ -79,24 +80,19 @@ export default function Page() {
                 </styled.p>
                 <Image
                     priority
-                    src="/hero-image-dark.png"
+                    src={theme === "dark" ? "/hero-image-dark.png" : "/hero-image-light.png"}
                     alt="Treblle core and other products diagram"
                     className={heroImage}
                     width={1282}
                     height={716}
-                    hidden={theme === "light"}
-                />
-                <Image
-                    priority
-                    src="/hero-image-light.png"
-                    alt="Treblle core and other products diagram"
-                    className={heroImage}
-                    width={1282}
-                    height={716}
-                    hidden={theme === "dark"}
                 />
                 <Stack
-                    css={{ flexDirection: { base: "column", sm: "row" }, gap: "6", marginTop: "2" }}
+                    css={{
+                        flexDirection: { base: "column", sm: "row" },
+                        gap: "6",
+                        marginTop: "2",
+                        zIndex: "10",
+                    }}
                 >
                     <Button asChild>
                         <Link href={"/advanced"}>Get Started</Link>
