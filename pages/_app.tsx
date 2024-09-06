@@ -2,12 +2,19 @@
 import "../styles/global.css";
 import "../styles/panda.css";
 
+import type { ElementType } from "react";
+
 import { Inter, Poppins } from "../styles/fonts";
 
-// @ts-expect-error
-export default function MyApp({ Component, pageProps }) {
+interface MyAppProperties {
+    Component: ElementType;
+    pageProps: Record<string, unknown>;
+}
+
+export default function MyApp({ Component, pageProps }: MyAppProperties) {
     return (
         <>
+            {/* eslint-disable-next-line react/no-unknown-property */}
             <style jsx global>
                 {`
                     h1,
