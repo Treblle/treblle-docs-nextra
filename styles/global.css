@@ -1,0 +1,3 @@
+html[class~=dark] body {
+    background-color: #01041a;
+}

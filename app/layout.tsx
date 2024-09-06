@@ -1,4 +1,5 @@
 import "../styles/panda.css";
+import "../styles/global.css";
 
 import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
