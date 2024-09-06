@@ -158,7 +158,6 @@ const heroImage = css({
 
 const changelogButton = css({
     backgroundColor: "#dfe3ef",
-    color: "text.inverted",
     fontSize: "sm",
     fontWeight: "semibold",
     display: "flex",
@@ -169,6 +168,12 @@ const changelogButton = css({
     zIndex: "10",
     width: "fit-content",
     _hover: {
-        backgroundColor: "cloud",
+        backgroundColor: "#d4d7e3",
+    },
+    _dark: {
+        backgroundColor: "#29304b",
+        _hover: {
+            backgroundColor: "#1e2336",
+        },
     },
 });

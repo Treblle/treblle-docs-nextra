@@ -19,7 +19,8 @@ const config: DocsThemeConfig = {
     nextThemes: {
         defaultTheme: "system",
     },
-    themeSwitch: {},
+    primaryHue: 210,
+    primarySaturation: 100,
     useNextSeoProps() {
         const { route } = useRouter();
         const { url, images } = seoConfig.openGraph;
