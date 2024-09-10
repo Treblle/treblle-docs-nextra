@@ -1,0 +1,7 @@
+html[class~="dark"] body {
+    background-color: #01041a;
+}
+
+body {
+    overscroll-behavior: none;
+}
