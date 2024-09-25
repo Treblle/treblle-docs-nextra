@@ -104,7 +104,7 @@ export default function Page() {
                     }}
                 >
                     <Button asChild>
-                        <Link href={"/introduction"}>Get Started</Link>
+                        <Link href={"/guides/"}>Get Started</Link>
                     </Button>
                     <Button variant="outline" asChild>
                         <Link href="https://github.com/Treblle/treblle-docs-nextra" target="_blank">

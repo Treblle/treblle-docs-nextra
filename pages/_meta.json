@@ -1,5 +1,3 @@
 {
-    "introduction": "Introduction",
-    "advanced": "Advanced",
-    "changelog": "Changelog"
+  "index": "guides/index"
 }
