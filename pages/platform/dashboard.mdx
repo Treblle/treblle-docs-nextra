@@ -1,130 +1,76 @@
 ---
-title: API Security
-description: 'Keep your APIs safe with automated API Security. Treblle makes 15 security checks on every single API request and gives it one of three threat levels: Low, Medium or High.'
+title: Treblle Dashboard
+description: Get deeper visibility and control of your APIs. Build and maintain your APIs confidently as Treblle analyzes 40+ different API specific data points across every single request.
 ---
 
-<iframe class="w-full aspect-[16/9]" src="https://www.youtube.com/embed/rMOGyFbu63k?si=fSvmSJXRT3AoGUry" aria-label="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="w-full aspect-[16/9]" src="https://www.youtube.com/embed/HirzSsVmvA8?si=Htk5ub3gykqyFyex" aria-label="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Treblle automatically scans every [requests](/platform/requests/) to your APIs for the most common security threats and gives each request a [threat level](#threat-levels) if one or more security threat is found on the request.
+The Treblle Dashboard provides you with a unified user interface for monitoring and observing your API [projects](/platform/projects/).
 
-## Threat levels
+You have instant access to the dashboard after <a href="https://app.treblle.com/register" target="_blank">creating a Treblle account</a> or visiting your <a href="https://app.treblle.com">dashboard</a> if you already have an account.
 
-When a request is sent to your API, Treblle assigns one of the following threat levels to that request if it has a known security threat:
+In the dashboard you see a list of all your [projects](/platform/projects/), get access to your API key which you will need for integrating a Treblle SDK in your codebase and so much more.
 
-- [Low](#low)
-- [Medium](#medium)
-- [High](#high)
+## Accessing your API key
 
-> Requests that do not have any known security threats will not get a threat level.
+You API keys is one of two pieces needed to integrate your codebase with a Treblle SDK, the second piece is your [Project ID](/platform/projects/#project-id)
 
-## Low
+To locate your API key, in the Treblle Dashboard, on the top right hand of the navigation, you will find your profile avatar. Click on the avatar to get a dropdown and then click on **Account Settings**.
 
-A request will have the threat level of **Low** if Treblle detects one or more of the following security threats:
+> If you are logged in already in your Treblle Dashboard, you can click on <a href="https://app.treblle.com/users/profile">this link</a> to access your account settings
 
-### IDs vs UUIDs
+Once you are on your account settings page, you will find your API key at the top, simply click on the **Copy key** button to copy your API key.
 
-Using UUIDs (Universally Unique Identifiers) instead of IDs on an API provides several benefits. UUIDs are globally unique and enhance security by preventing ID guessing or enumeration attacks, as the identifiers are not sequential or predictable.
+## Widgets
 
-By examining the request URL, Treblle can automatically detect whether or not you're using IDs on your endpoints.
+Widgets are a fundamental way to understand your API data. API users want different information about their APIs depending on their role.
 
-### Rate limiting
+Here are the Widgets we currently provide:
 
-Rate limiting is crucial for API security as it helps prevent abusive or malicious behavior by limiting the number of requests a client can make within a specified time frame.
+### Top cities
 
-It mitigates the risk of unauthorized access, DDoS attacks, and resource exhaustion, ensuring fair and controlled usage of API resources while maintaining system stability and security.
+List of top cities from which users access your API.
 
-Treblle looks for the `x-ratelimit-*` header in the response payload to see if you correctly use rate limiting.
+### Top countries
 
-### Content Labeling
+List of top countries from which users access your API.
 
-The Content-Type header ensures that the API data is correctly interpreted and processed. The API can validate and sanitize the incoming data by specifying the content type, **guarding against cross-site scripting** (XSS) or content spoofing attacks.
+### Number of Requests
 
-It also helps prevent unintended data processing errors and promotes interoperability between different systems consuming the API.
+Provides an overview of how many requests you get every day.
 
-Treblle checks to see if the `Content-Type` header exists and if its value is set to `application/json`.
+### Requests map
 
-### MIME Sniffing
+View recent requests made to your API directly on a live map.
 
-The `X-Content-Type-Options` plays a vital role in protecting the API from MIME sniffing attacks. By setting the value of this header to `nosniff` it instructs the browser to strictly adhere to the declared `Content-Type` and prevents it from attempting to sniff or interpret the response data based on its content.
+### Top devices
 
-Treblle checks to see if the `X-Content-Type-Options` header exists and if its value is set to `nosniff`
+List of top devices that are used to access your API.
 
-### Force Secure Connection
+### Client App versions
 
-The HTTP Strict-Transport-Security (HSTS) header is crucial for enhancing API security by **enforcing secure communication over HTTPS**.
+Shows the versions of applications or browsers that accessed your API
 
-When a server includes the HSTS header in its response, it instructs the client's browser to always connect to the API using HTTPS, even if the user enters an HTTP URL.
+### Average Load Time
 
-This prevents potential downgrade attacks and ensures that all communication remains encrypted, reducing the risk of eavesdropping, tampering, and man-in-the-middle attacks.
+The average load time on your API.
 
-Treblle looks for the `strict-transport-security` header in your API responses.
+### Average response size
 
-### Embedding Prevention
+The average response time on your API.
 
-The `X-Frame-Options` header plays a significant role in API security by **mitigating clickjacking attacks**. Setting this header's value to `deny` or `sameorigin` restricts how the API can be embedded within a web page using frames or iframes.
+### Recent Requests List
 
-This prevents attackers from tricking users into interacting with the API through maliciously crafted pages, protecting against cross-site scripting (XSS) and other attacks that exploit the user's session or perform unauthorized actions on their behalf.
+Provides a summary of recent requests made to your API.
 
-Treblle checks to see if the `X-Frame-Options` header exists and its value is set to `deny`.
+### Performance
 
-### Security Policies
+Provides a graphical view of request load times for a user-specified time period.
 
-The `Content-Security-Policy` (CSP) allows developers to **control and limit** the types of content that can be loaded and executed on a web page.
 
-By specifying a policy, such as restricting the allowed sources of scripts, stylesheets, or other resources, CSP helps **prevent various types of attacks**, including cross-site scripting (XSS) and data injection attacks.
+## Removing widgets
 
-Treblle checks to see if the response headers for your requests have a `Content-Security-Policy` header defined.
+You can remove a widget by clicking on the x button on the top-right corner of the widget card.
+Doing so will remove the widget from your dashboard.
 
-### Content Type Specification
 
-The `Accept` header helps establish a **secure and reliable communication channel** between the client and the API.
-
-The `Accept` header ensures that the API provides data in a format that the client expects. This helps prevent potential vulnerabilities or errors caused by mismatched data formats and contributes to the overall security and stability of the API ecosystem.
-
-Treblle checks the headers of your request to see if the `Accept` header exists and its value is set to `application/json`.
-
-### Method Limiting
-
-The `Allow` header informs the client about the HTTP methods that are allowed by the API endpoint. By specifying the allowed methods, the `Allow` header helps **prevent unauthorized or malicious access attempts** to the API.
-
-It ensures that clients interact with the API using only the designated and intended methods, reducing the risk of unauthorized actions and enforcing proper access controls.
-
-Treblle checks the headers of your responses to see if the `Allow` header exists.
-
-## Medium
-
-A request will have the threat level of **Medium** if Treblle detects one or more of the following security threats:
-
-### Authorization
-
-API Authorization is crucial for ensuring secure access and protecting sensitive data.
-
-It helps control and verify the identity and permissions of individuals or systems accessing an API, preventing unauthorized access and safeguarding against potential breaches or misuse of data.
-
-Treblle can automatically detect all forms of authorization on every API request and check to make sure it's being used properly.
-
-## High
-
-A request will have the threat level of **High** if Treblle detects one or more of the following security threats:
-
-### SQL Injection
-
-SQL injection is a vulnerability that occurs when an attacker **manipulates the input parameters** of an API to inject malicious SQL statements.
-
-It allows the attacker to **execute unauthorized database queries** and potentially gain access to sensitive data or modify the database. To prevent SQL injection, sanitizing and validating user input is crucial.
-
-Treblle analyzes the payload sent with every API request and detects the most common SQL injection patterns.
-
-### IP Reputation
-
-IP Reputation check **evaluates the trustworthiness and reputation of an IP address** based on its historical behavior and associations. It helps identify potential threats, such as spam or malicious activity, by assessing the IP's track record and reputation within the online community.
-
-Treblle uses it's **own network as well as 3rd party** services to check the reputation of your users IP addresses.
-
-### Secure Connection
-
-Using HTTPS on an API is **essential for maintaining data confidentiality and integrity** during transmission.
-
-It encrypts the communication between clients and the API, preventing eavesdropping and tampering by malicious actors, thereby enhancing security and protecting sensitive information.
-
-Treblle **automatically detects** whether or not the requests your users are making are using HTTPs instead of HTTP.
