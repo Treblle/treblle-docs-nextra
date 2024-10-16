@@ -1,0 +1,52 @@
+import { Callout, RemoteContent, Tabs } from "nextra/components";
+import { buildDynamicMDX } from "nextra/remote";
+import { fetchGlobalProps } from "../../features/GlobalProps/lib/fetchGlobalProps";
+import { collection, getDoc, doc, getFirestore } from "firebase/firestore";
+import { database } from "../../utils/firebaseConfig";
+
+import { decodeMarkdown } from "../../utils/decodeMarkdown";
+
+import json from "../../docs-treblle-paths.json";
+
+export async function getStaticProps({ params }) {
+
+  try {
+
+      const path = params.slug?.join('.') ?? 'index'
+
+      const docRef = doc(database, "pages", path.replace(/\.mdx$/, ''));
+      const pageSnap = await getDoc(docRef);
+      const pageData = pageSnap.data();
+
+      if (!pageData?.content) {
+        return { notFound: true }
+      }
+
+      const dynamicMdx = await buildDynamicMDX(decodeMarkdown(pageData.content), { defaultShowCopyCode: true })
+
+      return {
+          props: {
+              ...(await fetchGlobalProps()),
+              ...dynamicMdx,
+          },
+          // The page will be considered as stale and regenerated every 60 seconds.
+          revalidate: 60
+      };
+
+  } catch (error) {
+      console.error(error);
+      return { notFound: true }
+  }
+
+}
+
+export const getStaticPaths = () => {
+    return {
+        fallback: "blocking",
+        paths: json.filePaths.map((filePath) => ({
+            params: { slug: filePath.replace(/\.mdx?$/, "").split("/") },
+        })),
+    };
+};
+
+<RemoteContent components={{ Callout, $Tabs: Tabs }} />

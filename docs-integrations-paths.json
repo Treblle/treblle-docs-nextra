@@ -1,0 +1,79 @@
+{
+  "filePaths": [
+    "start.mdx",
+    "custom.mdx"
+  ],
+  "nestedMeta": {
+    "start": "Introduction",
+    "custom": "Custom Integrations",
+    "gateways": {
+      "type": "folder",
+      "title": "Gateways",
+      "items": {
+        "traefik": "Traefik Plugin for Treblle",
+        "wso2": "WSO2 Plugin for Treblle"
+      }
+    },
+    "go": {
+      "type": "folder",
+      "title": "Golang",
+      "items": {
+        "core": "Treblle with Go standard library"
+      }
+    },
+    "java": {
+      "type": "folder",
+      "title": "Java",
+      "items": {
+        "spring": "Treblle with Spring"
+      }
+    },
+    "javascript": {
+      "type": "folder",
+      "title": "JavaScript",
+      "items": {
+        "adonis": "Treblle with Adonis",
+        "directus": "Treblle with Directus",
+        "express": "Treblle with Express",
+        "fastify": "Treblle with Fastify",
+        "koa": "Treblle with Koa",
+        "nest": "Treblle with Nest",
+        "sails": "Treblle with Sails",
+        "strapi": "Treblle with Strapi"
+      }
+    },
+    "net": {
+      "type": "folder",
+      "title": ".NET",
+      "items": {
+        "net-core": "Treblle with .NET Core",
+        "net": "Treblle with .NET Framework"
+      }
+    },
+    "php": {
+      "type": "folder",
+      "title": "PHP",
+      "items": {
+        "laravel": "Treblle with Laravel",
+        "lumen": "Treblle with Lumen",
+        "no-framework": "Treblle with PHP standard library",
+        "symfony": "Treblle with Symfony"
+      }
+    },
+    "python": {
+      "type": "folder",
+      "title": "Python",
+      "items": {
+        "django": "Treblle with Django",
+        "flask": "Treblle with Flask"
+      }
+    },
+    "ruby": {
+      "type": "folder",
+      "title": "Ruby",
+      "items": {
+        "rails": "Treblle with Rails"
+      }
+    }
+  }
+}

@@ -25,7 +25,8 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         ".eslintrc.cjs",
-        "postcss.config.cjs"
+        "postcss.config.cjs",
+        "utils/firebaseConfig.ts"
     ],
     "exclude": ["node_modules"]
 }

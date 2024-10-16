@@ -1,0 +1,53 @@
+---
+title: API Documentation
+description: Keep your focus on building and delivering amazing API experiences, instead of manuall writing API docs with every new release.
+---
+
+<iframe class="w-full aspect-[16/9]" src="https://www.youtube.com/embed/E_PsIQoMehY?si=8L-cwzuIkEb238tL" aria-label="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+You can quickly build custom dashboard for your Treblle [projects](/platform/dashboard/) in a few clicks and focus in on the data you want to see at a glance.
+
+## Widgets
+
+Treblle makes available widgets to aid in quickly customizing your dashboard.
+Listed below are the widgets you can add easily to customize your dashboard:
+
+### Top cities
+
+See a list of top cities from which users access your API.
+
+### Top countries
+
+See a list of top countries from which users access your API.
+
+### Requests per day
+
+Get an overview of how many requests you get every day.
+
+### Requests map
+
+View recent requests made to your API directly on a live map.
+
+### Top devices
+
+See a list of top devices that are used to access your API.
+
+### Weekly breakdown
+
+Breakdown of the most popular days in the week that your API was accessed.
+
+### Monthly breakdown
+
+Breakdown of the most popular months of the year that your API was accessed
+
+### App versions
+
+Shows the versions of applications or browsers that accessed your API
+
+## Reordering widgets
+
+You can reorder widgets already on your dashboard by clicking on dragging on the reorder handle on the top right corner of the desired widget card.
+
+## Removing widgets
+
+You can remove a widget by clicking on the _x_ button on the top-right corner of the widget card. Doing so will remove the widget from your dashboard.

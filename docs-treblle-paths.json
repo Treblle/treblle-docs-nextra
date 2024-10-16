@@ -1,0 +1,64 @@
+{
+  "filePaths": [
+    "index.mdx",
+    "account.mdx",
+    "roles.mdx",
+    "workspace-settings.mdx",
+    "workspace-settings/sharing.mdx",
+    "workspace-settings/sso.mdx",
+    "workspace-settings/roles.mdx",
+    "workspace-settings/plans.mdx",
+    "workspace-settings/billing.mdx",
+    "workspaces.mdx",
+    "workspace-dashboard.mdx",
+    "finding-apis.mdx",
+    "create-an-api.mdx",
+    "visibility.mdx",
+    "api-settings.mdx",
+    "api-dashboard/widgets.mdx",
+    "documentation.mdx",
+    "requests.mdx",
+    "problems.mdx",
+    "endpoints.mdx",
+    "governance.mdx",
+    "compliance.mdx",
+    "catalog.mdx"
+  ],
+  "nestedMeta": {
+    "index": "Introduction",
+    "account": "Account Creation & Sign-On",
+    "roles": "People & Workspace Roles",
+    "workspace-settings": {
+      "type": "folder",
+      "title": "Workspace Settings",
+      "items": {
+        "sharing": "Sharing",
+        "sso": "Authentication",
+        "roles": "People & WS Roles",
+        "plans": "Plans",
+        "billing": "Billing"
+      }
+    },
+    "workspaces": "Workspaces",
+    "workspace-dashboard": "Workspace Dashboard",
+    "finding-apis": "Finding APIs",
+    "create-an-api": "Creating an API",
+    "visibility": "API Visibility",
+    "api-settings": "API Settings",
+    "api-dashboard": {
+      "type": "folder",
+      "title": "API Dashboard",
+      "items": {
+        "widgets": "Widgets"
+      }
+    },
+
+    "documentation": "API Docs",
+    "requests": "Requests",
+    "problems": "Problems",
+    "endpoints": "Endpoints",
+    "governance": "Governance",
+    "compliance": "Compliance",
+    "catalog": "Catalog"
+  }
+}
