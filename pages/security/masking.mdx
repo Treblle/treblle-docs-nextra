@@ -3,6 +3,21 @@ title: Masking
 description: Treblle allows you to mask senstive data before it even leaves your server.
 ---
 
+
+import { fetchGlobalProps } from "../../features/GlobalProps/lib/fetchGlobalProps";
+
+
+export async function getStaticProps({ params }) {
+
+      return {
+          props: {
+              ...(await fetchGlobalProps()),
+          },
+      };
+
+}
+
+
 Masking fields ensure certain sensitive data are removed before being sent to Treblle.
 
 To make sure masking is done before **any data** leaves your server we built it into all our SDKs.

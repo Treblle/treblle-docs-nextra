@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { type DocsThemeConfig, useConfig } from "nextra-theme-docs";
 
 import seoConfig from "./seo.config";
@@ -14,26 +13,15 @@ const config: DocsThemeConfig = {
     },
     docsRepositoryBase: "https://github.com/Treblle/treblle-docs-nextra",
     footer: {
-        text: "©Treblle. All Rights Reserved.",
+        content: "©Treblle. All Rights Reserved.",
     },
     nextThemes: {
         defaultTheme: "system",
     },
-    primaryHue: 210,
-    primarySaturation: 100,
-    useNextSeoProps() {
-        const { route } = useRouter();
-        const { url, images } = seoConfig.openGraph;
-
-        if (route === "/") {
-            return { titleTemplate: "%s - Treblle" };
-        }
-
-        return {
-            titleTemplate: seoConfig.title.template,
-            openGraph: { url, images: [{ url: `${url}${images}` }] },
-        };
-    },
+    color: {
+        hue: 210,
+        saturation: 100,
+    } ,
     head: () => {
         const { frontMatter: meta } = useConfig();
         const { title } = meta;
@@ -41,12 +29,12 @@ const config: DocsThemeConfig = {
         return (
             <>
                 <meta httpEquiv="Content-Language" content="en" />
-                <meta name="description" content={meta.description || seoConfig.description} />
+                <meta name="description" content={seoConfig.description} />
                 <meta
                     name="og:title"
                     content={title ? title + " – Treblle" : seoConfig.title.default}
                 />
-                <meta name="og:description" content={meta.description || seoConfig.description} />
+                <meta name="og:description" content={seoConfig.description} />
                 <meta name="og:image" content={seoConfig.openGraph.images} />
                 <meta name="og:url" content={seoConfig.openGraph.url} />
                 <meta name="twitter:card" content="summary_large_image" />

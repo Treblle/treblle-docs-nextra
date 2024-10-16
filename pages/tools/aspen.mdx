@@ -3,6 +3,21 @@ title: Aspen
 description: Check out Aspen, the privacy focused HTTP client.
 ---
 
+
+
+import { fetchGlobalProps } from "../../features/GlobalProps/lib/fetchGlobalProps";
+
+
+export async function getStaticProps({ params }) {
+
+      return {
+          props: {
+              ...(await fetchGlobalProps()),
+          },
+      };
+
+}
+
 Aspen is a free API-testing native app for macOS. Built with ZERO trust in mind, there is no login required to run API test. It is specifically made to meet the needs of testing REST APIs, and with the help of AI, instantly help with integrations by generating data models, Open API Specs and generating integration code.
 
 ## How does it work?

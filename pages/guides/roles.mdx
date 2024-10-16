@@ -1,3 +1,11 @@
+import {fetchGlobalProps } from '../../features/GlobalProps/lib/fetchGlobalProps'
+
+export async function getStaticProps({ params }) {
+
+    return { props: { ... await fetchGlobalProps() } }
+
+}
+
 ---
 title: Inviting People to Your Workspace
 description: Learn how to invite people to your Treblle workspace.

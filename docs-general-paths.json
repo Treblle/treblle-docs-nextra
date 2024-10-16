@@ -1,0 +1,55 @@
+{
+  "filePaths": [
+  ],
+  "nestedMeta": {
+    "index": {
+      "title": "Homepage",
+      "type": "page",
+      "display": "hidden"
+    },
+    "platform": {
+      "type": "page",
+      "title": "Platform"
+    },
+    "integrations": {
+      "type": "page",
+      "title": "Integrations",
+      "items": {
+        "custom": {
+          "title": "Custom sdsdsd"
+        }
+      }
+    },
+    "resources": {
+      "type": "menu",
+      "title": "Resources",
+      "items": {
+        "knowledgebase": {
+          "title": "Knowledgebase"
+        },
+        "acknowledgement": {
+          "title": "Acknowledgement"
+        },
+        "changelog": {
+          "title": "Changelog"
+        },
+        "contributors": {
+          "title": "Contributors",
+          "href": "https://github.com/vercel/swr/graphs/contributors",
+          "newWindow": true
+        },
+        "123": {
+          "title": "Last, key is number",
+          "href": "https://google.com",
+          "newWindow": true
+        }
+      }
+    },
+    "treblle_link": {
+      "type": "page",
+      "title": "Website ↗",
+      "href": "https://treblle.com",
+      "newWindow": true
+    }
+  }
+}

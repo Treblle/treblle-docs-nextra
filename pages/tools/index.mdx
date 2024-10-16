@@ -3,6 +3,21 @@ title: Introduction
 description: At Treblle we also invest a lot of time in developer tooling.
 ---
 
+
+import { fetchGlobalProps } from "../../features/GlobalProps/lib/fetchGlobalProps";
+
+
+export async function getStaticProps({ params }) {
+
+      return {
+          props: {
+              ...(await fetchGlobalProps()),
+          },
+      };
+
+}
+
+
 As well as our core product, Treblle, we have built a few tools that help developers and API providers.
 
 ## Aspen
